@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="UNSW rip-off version of the popular forum EdStem.">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Qanda</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="src/Qanda.webp" type="image/x-icon">
+        <!-- You can add your styles and scripts here -->
+        <link rel="stylesheet" type="text/css" media="screen" href="styles/global.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="styles/qanda-page-right-side.css" />
+        <!--Google Material Icons -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    </head>
+    <body>
+        <main role="main" class="hidden-registration-status hidden-qanda-status">
+            <div class="login-page">
+                <div class="login-box">
+                    <div class="container">
+                        <div class="website-icon">
+                            <img class="website-icon-img" src="src/Qanda.webp" alt="Qanda">
+                        </div>
+                        <div class="login-container">
+                            <div class="input-email">
+                                <img class="email-icon" src="src/login-icon.svg" alt="email-icon">
+                                <input type="email" class="email" id="login-mail" name="user_email" placeholder="Please input email" required />
+                                <div class="rm-email" >
+                                    <img class="rm-email-icon" id="rm-email-1" src="src/rm-icon.svg" alt="remove-email">
+                                </div>
+                            </div>
+                
+                            <div class="input-password">
+                                <img class="password-icon" src="src/password-icon.svg" alt="password-icon">
+                                <input type="password" class="password" id="login-pword" name="user_password" placeholder="Please input password" required />
+                                <div class="rm-password">
+                                    <img class="rm-password-icon" id="rm-password-1" src="src/rm-icon.svg" alt="remove-password">
+                                </div>
+                                <div class="hidden-control" id="hidden-password-1">
+                                    <div class="h-c-icon" style="background-image: url(src/h-c-icon.svg);"></div>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="button-container">
+                            <div class="Login" id="login-button">Login</div>
+                            <div class="registration" id=sign-up-button>Sign Up</div>
+                        </div> 
+                    </div>
+        
+                </div>
+            </div>
+
+            <div class="registration-page">
+                <div class="registration-box">
+                    <div class="container">
+                        <div class="website-icon">
+                            <img class="website-icon-img" src="src/Qanda.webp" alt="Qanda">
+                            <div class="return-button">
+                                <img class="return-button-img" id="return-button" src='src/return-button.svg'>
+                            </div>
+                        </div>
+                        <div class="registration-container">
+                            <div class="input-email">
+                                <img class="email-icon" src="src/login-icon.svg" alt="email-icon">
+                                <input type="email" class="email" id="register-mail" name="user_email" placeholder="Please input email" required />
+                                <div class="rm-email">
+                                    <img class="rm-email-icon" id="rm-email-2" src="src/rm-icon.svg">
+                                </div>
+                            </div>
+                            
+                            <div class="input-name">
+                                <img class="name-icon" src="src/login-icon.svg" alt="name-icon">
+                                <input type="text" class="name" id="register-name" name="user_name" placeholder="Please input your name" required />
+                                <div class="rm-name">
+                                    <img class="rm-name-icon" id="rm-name" src="src/rm-icon.svg" alt="remove-name">
+                                </div>
+                            </div>
+
+                            <div class="input-password">
+                                <img class="password-icon" src="src/password-icon.svg" alt="password-icon">
+                                <input type="password" class="password" id="register-pword" name="user_password" placeholder="Please input password" required />
+                                <div class="rm-password">
+                                    <img class="rm-password-icon" id="rm-password-2" src="src/rm-icon.svg" alt="remove-password">
+                                </div>
+                                <div class="hidden-control" id="hidden-password-2">
+                                    <div class="h-c-icon" style="background-image: url(src/h-c-icon.svg);"></div>
+                                </div>
+                            </div>
+
+                            <div class="input-password">
+                                <img class="password-icon" src="src/password-icon.svg" alt="password-icon">
+                                <input type="password" class="password" id="register-confirm-pword" name="user_password" placeholder="Please confirm your password" required />
+                                <div class="rm-password">
+                                    <img class="rm-password-icon" id="rm-password-3" src="src/rm-icon.svg" alt="remove-password">
+                                </div>
+                                <div class="hidden-control" id="hidden-password-3">
+                                    <div class="h-c-icon" style="background-image: url(src/h-c-icon.svg);"></div>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="button-container">
+                            <div class="registration" id="register-button">Register</div>
+                        </div> 
+                    </div>
+        
+                </div>
+            </div>
+
+            <div class="qanda-page">
+                <header class="header-container">
+                    <div class="sign-out-button-container">
+                        <span class="material-symbols-outlined logout" id="logout">Logout</span>
+                    </div>
+                    <img src="src/Qanda.webp" alt="Logo" class="app-logo">
+                    <div class="app-title-container">
+                        <div class="app-title">
+                            <div class="text-0">COMP6080</div>
+                            <div class="text-1">-</div>
+                            <div class="text-2">Qanda Discussion</div>
+                        </div>
+                    </div>
+                    <div class="app-group-user">
+                        <span class="material-symbols-outlined user-icon" id="user">manage_accounts</span> 
+                    </div>
+                </header>
+                <div class="app-content-container">
+                    <div class="app-content">
+                        <div class="split-panel" style="flex:0 0 400px;">
+                            <section aria-label="Thread list" class="thread-list-container">
+                                <div class="thread-list-header">
+                                    <div class="header-side">
+                                        <span class="material-symbols-outlined menu">Menu</span> 
+                                    </div>
+                                    <div class="header-side">
+                                        <div class="discuss-new-thread-button" id='new-thread' role="button"><span class="material-symbols-outlined new-thread">Edit</span> New Thread </div>
+                                    </div>
+                                </div>
+        
+                                <div class="thread-list-body">
+                                    <div role="listbox" class="thread-list" id="thread-list" aria-label="Thread list">
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+        
+                        <div role="separator" aria-label="Split divider" class="split-divider" style="flex-basis: 1px;"></div>
+        
+                        <div class="split-panel-horizontal" style="flex: 1 0 0px;">
+                            <div class="disindf-content" id="disindf-content">
+
+                                <!-- main right side page -->
+                                <div class="discuss-landing main-right-side-page">
+                                    <div class="pane-placeholder dl-placeholder">
+                                        <span class="paneph-icon icon icon-discussion">
+                                            <div class="material-symbols-outlined forum" role="img" aria-hidden="true">Forum</div>
+                                        </span>
+                                        <div class="paneph-text"> select a thread </div>
+                                    </div>
+                                </div>
+
+                                <!-- New thread right side page -->
+                                <div class="new-header-container discuss-edit new-thread-right-side-page">
+                                    <header class="header-container-header">
+                                        <div class="header-layout-left">
+                                            <div class="navbar-side">
+                                                <button type="button" class="navbar-button" id="new-cancel">
+                                                    <span class="navbar-text">Cancel</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                            
+                                        <div class="header-layout-fill">
+                                            <div class="navbar-fill">
+                                                <div class="navbar-title-layout">
+                                                    <h2 class="navbar-title">New Question</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                            
+                                        <div class="header-layout-right">
+                                            <div class="navbar-side">
+                                                <button type="button" class="navbar-button new-post">
+                                                    <span class="navbar-text thread-submit">Post</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </header>
+                            
+                                    <div class="header-container-content">
+                                        <div class="header-container-scroll">
+                                            <div class="new-thread-content">
+                                                <div class="thread-editor">
+                                                    <div class="thread-field">
+                                                        <label for="s66">Title</label>
+                                                        <div class="thread-field-body">
+                                                            <div class="input-container">
+                                                                <input type="text" class="input-thread-title" id="edit-thread-title" autocomplete="off">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                            
+                                                    <div class="input-thread-container textarea">
+                                                        <textarea class="input-thread" id="edit-thread-content" style="min-height: 200px; max-height: 400px;" placeholder="edit your question"></textarea>
+                                                    </div>
+                            
+                            
+                                                    <div class="thread-checkboxes">
+                                                        <div tabindex="0" role="checkbox" aria-checked="false" class="thread-checkbox">
+                                                            <div class="check-layout" style="display: flex;">
+                                                                <input type="checkbox" id='check-button' class="check-button">
+                                                                <label for="check-button" class="check-label">Private</label>
+                                                            </div>
+                            
+                                                            <div class="check-description">
+                                                                Visible to you and staff only
+                                                            </div>  
+                                                        </div>
+                                                    </div>
+                                                </div>
+                            
+                                                <div class="post-button-container">
+                                                    <div class="post-button">
+                                                        <button type="button" class="post-button-icon new-post">Post</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- edit thread -->
+                                <div class="new-header-container discuss-edit edit-thread-right-side-page">
+                                    <header class="header-container-header">
+                                        <div class="header-layout-left">
+                                            <div class="navbar-side">
+                                                <button type="button" class="navbar-button" id="edit-cancel">
+                                                    <span class="navbar-text">Cancel</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                            
+                                        <div class="header-layout-fill">
+                                            <div class="navbar-fill">
+                                                <div class="navbar-title-layout">
+                                                    <h2 class="navbar-title">Edit Question</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                            
+                                        <div class="header-layout-right">
+                                            <div class="navbar-side">
+                                                <button type="button" class="navbar-button edit-post">
+                                                    <span class="navbar-text thread-submit">Post</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </header>
+                            
+                                    <div class="header-container-content">
+                                        <div class="header-container-scroll">
+                                            <div class="new-thread-content">
+                                                <div class="thread-editor">
+                                                    <div class="thread-field">
+                                                        <label for="s66">Title</label>
+                                                        <div class="thread-field-body">
+                                                            <div class="input-container">
+                                                                <input type="text" class="input-thread-title" id="change-thread-title" autocomplete="off">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                            
+                                                    <div class="input-thread-container textarea">
+                                                        <textarea class="input-thread" id="change-thread-content" style="min-height: 200px; max-height: 400px;" placeholder="edit your question"></textarea>
+                                                    </div>
+                            
+                            
+                                                    <div class="thread-checkboxes">
+                                                        <div tabindex="0" role="checkbox" aria-checked="false" class="thread-checkbox">
+                                                            <div class="check-layout" style="display: flex;">
+                                                                <input type="checkbox" id='change-check-button' class="check-button">
+                                                                <label for="check-button" class="check-label">Private</label>
+                                                            </div>
+                            
+                                                            <div class="check-description">
+                                                                Visible to you and staff only
+                                                            </div>  
+                                                        </div>
+                                                    </div>
+                                                </div>
+                            
+                                                <div class="post-button-container">
+                                                    <div class="post-button">
+                                                        <button type="button" class="post-button-icon edit-post">Post</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--detail thread right side page  -->
+                                <section aria-label="Thread" class="discuss-show detail-thread-right-side-page">
+                                    <div class="thread-body">
+                                        <div>
+                                            <div class="discuss-thread">
+                                                <h2 aria-live="polite" class="thread-title" id="thread-detail-title"></h2> 
+                                                <div class="thread-head-layout">
+                                                    <div class="thread-head-start">
+                                                        <span class="material-symbols-outlined thread-user-icon">Person</span>
+                                                        <div class="thread-head-body" >
+                                                            <div class="thread-head-body-user">
+                                                                <span class="thread-user-name" id="thread-detail-name">${name}</span> 
+                                                                <span class="user-role-label" style="display: none;"></span>
+                                                            </div>
+                                                            <div class="thread-head-body-time">
+                                                                <time id="thread-detail-time">${time}</time>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                            
+                                                    <div class="thread-head-end">
+                                                        <button class="thread-head-button like">
+                                                            <span class="material-symbols-outlined icon" id="thread-like">Favorite</span>
+                                                            <div class="thread-head-icon-label">LIKE</div>
+                                                        </button>
+                                                        <button class="thread-head-button watch">
+                                                            <span class="material-symbols-outlined icon" id="thread-watch">Visibility</span> 
+                                                            <!-- change to Visibility Off -->
+                                                            <div class="thread-head-icon-label">WATCH</div>
+                                                        </button>
+                                                    </div>
+                                                </div> 
+                            
+                                                <div class="thread-body-layout">
+                                                    <div class="thread-body-container">
+                                                        <div class="thread-body-content" aria-live="polite">
+                                                            <div class="display-document" id="thread-content">
+                                                                
+                                                            </div>
+                                                        </div>
+                                                        <div class="thread-button-container">
+                                                            <button class="comment" id="thread-comment">Comment</button>
+                                                            <button class="edit" id="thread-edit">Edit</button>
+                                                            <button class="delete" id="thread-delete">Delete</button>
+                                                        </div>
+                    
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                            
+                                        <div class="thread-answer-heading">Your Answer</div>
+                                        <div class="thread-answer">
+                                            <div class="post-answer">
+                                                <textarea class="input-answer" style="min-height: 200px; max-height: 400px;"></textarea>
+                                            </div>
+                                            <div class="post-button-container">
+                                                <div class="post-button">
+                                                    <button type="button" class="post-button-icon">Post</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                            
+                                </section>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </main>
+        <script type="module" src="src/main.js"></script>
+    </body>
+</html>
+
+
+
+
+    
+
+    

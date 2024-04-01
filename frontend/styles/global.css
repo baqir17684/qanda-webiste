@@ -1,0 +1,1077 @@
+/* This file includes the style of login page, registration page, qanda page, page control and google material icons set */
+
+
+
+/* page control: login page / registration page / qanda page */
+.hidden-login-status .login-page,
+.hidden-registration-status .registration-page,
+.hidden-qanda-status .qanda-page {
+  position: absolute;
+  left: -5000em;
+  height: 0;
+  overflow: hidden;
+}
+
+
+/* google material icons */
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+  }
+
+/* overall style */
+/* overall style */
+@media only screen and (max-width: 1800px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+html {
+    display: block;
+}  
+
+.login-page,
+.registration-page {
+    cursor: url('../src/cursor.png') 3 3, default; 
+}
+
+main {
+    width: 100%;
+    height: 100%;
+}
+
+.cursor-ring {
+    width: 30px; 
+    height: 30px; 
+    border: 2px solid white; 
+    border-radius: 50%; 
+    position: absolute;
+    pointer-events: none; 
+    transition: transform 0.3s; 
+    transform: translate(-50%, -50%); 
+    z-index: 1000; 
+}
+
+
+body{
+    display: block;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: sans-serif;
+    user-select: none;
+}
+
+img {
+    -webkit-user-drag: none;
+}
+
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+input {
+    text-rendering: auto;
+    color: fieldtext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background-color: field;
+    margin: 0em;
+    padding: 1px 0px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+    padding-block: 1px;
+    padding-inline: 2px;
+}
+
+/* login page style */
+.login-page {
+    width: 100%;
+    height: 100%;
+}
+
+.login-page {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../src/background.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login-page
+.login-box {
+    opacity: 1;
+    visibility: visible;
+}
+
+.login-page {   
+    z-index: 999;
+    font-size: 16px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    transform: translate3d(0, 0, 1px);
+    transition: opacity 0.3s, visibility 0.3s;
+    opacity: 1;
+    visibility: visible;
+    display: block;
+}
+
+.login-box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s, visibility 0.3s;
+    opacity: 1;
+    visibility: visible;
+}
+
+.container {
+    flex: none;
+    position: relative;
+    background-color: #fff;
+    max-width: 90%;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    width: 28.75em;
+}
+
+.website-icon {
+    background-color: #000;
+    background-image: url(https://web.hycdn.cn/hg_web_sdk/lib/assets/header_bg.11d0e46058f2e734a322.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 5.125em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 4px solid #0098dc;
+    border-radius: 4px 4px 0 0;
+    position: relative;
+}
+
+.website-icon .website-icon-img {
+    display: block;
+    max-height: 100%;
+    border-radius: 5px;
+    width: auto;
+}
+
+.website-icon .return-button {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 0 1.5em;
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    visibility: visible;     
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.website-icon .return-button .return-button-img {
+    display: block;
+    max-height: 90%;
+    width: auto;
+}
+
+.login-container {
+    padding: 2em;
+    padding-bottom: 0;
+}
+
+.login-container .input-email {
+    position: relative;
+    transition: border-color 0.3s;
+    height: 3em;
+    border-radius: 1.5em;
+    border: 1px solid #eeeeee;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 1.5em;
+}
+
+.login-container .focus-border,
+.login-container .input-email:hover,
+.login-container .input-password:hover {
+    border: 2px solid black !important;
+}
+
+.login-container .input-email .email-icon {
+    transition: opacity 0.3s;
+    opacity: 0.5;
+    display: block;
+    width: 1.125em;
+    height: auto;
+}
+
+.login-container .input-email .email {
+    margin: 0 0.57142857em;
+    padding-block: 1px;
+    padding-inline: 2px;
+    flex: auto;
+    display: block;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    font-size: 0.875em;
+    background-color: transparent;
+}
+
+.login-container .input-email .rm-email {
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right:   -0.5em;
+    width: 1.75em;
+    height: 100%;
+}
+
+.login-container .input-email .rm-email .rm-email-icon {
+    opacity: 0;
+    display: block;
+    width: 50%;
+    height: auto;
+}
+
+.login-container .input-password {
+    position: relative;
+    margin-top: 0.75em;
+    transition: border-color 0.3s;
+    height: 3em;
+    border-radius: 1.5em;
+    border: 1px solid #eeeeee;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 1.5em;
+}
+
+.login-container .input-password .password-icon {
+    transition: opacity 0.3s;
+    opacity: 0.5;
+    display: block;
+    width: 1.125em;
+    height: auto;
+}
+
+.login-container .input-password .password {
+    margin: 0 0.57142857em;
+    flex: auto;
+    display: block;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    font-size: 0.875em;
+    background-color: transparent;
+}
+
+input[type="password" i] {
+    -webkit-text-security: disc !important;
+    padding-block: 1px;
+    padding-inline: 2px;
+}
+
+.login-container .input-password .rm-password {
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: -0.5em;
+    width: 1.75em;
+    height: 100%;
+}
+
+.login-container .input-password .rm-password .rm-password-icon {
+    display: block;
+    width: 50%;
+    height: auto;
+    transition: opacity 0.3s;
+    opacity: 0;
+
+}
+
+.login-container .input-password .hidden-control {
+    opacity: 1;
+    cursor: pointer;
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: -0.5em;
+    margin-left: 0.5em;
+    width: 1.75rem;
+    height: 100%;
+    transition: opacity 0.3s;
+    opacity: 0.56;
+}
+
+.login-container .input-password .hidden-control .h-c-icon {
+    display: block;
+    width: 0.875em;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+
+.button-container {
+    padding: 0 2em 1.5em;
+}
+
+.button-container .Login, .button-container .registration{
+    cursor: pointer;
+    margin: 1.5em;
+    height: 3em;
+    border-radius: 1.5em;
+    display: flex;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+    background-color: #000;
+}
+
+
+
+
+
+/* registration page style */
+
+.registration-container .focus-border,
+.registration-container .input-email:hover,
+.registration-container .input-name:hover,
+.registration-container .input-password:hover {
+    border: 2px solid black !important;
+}
+
+.registration-page {
+    width: 100%;
+    height: 100%;
+}
+
+.registration-page {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../src/background.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.registration-page
+.registration-box {
+    opacity: 1;
+    visibility: visible;
+}
+
+.registration-page {   
+    z-index: 999;
+    font-size: 16px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    transform: translate3d(0, 0, 1px);
+    transition: opacity 0.3s, visibility 0.3s;
+    opacity: 1;
+    visibility: visible;
+    display: block;
+}
+
+.registration-box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s, visibility 0.3s;
+    opacity: 1;
+    visibility: visible;
+}
+
+.container {
+    flex: none;
+    position: relative;
+    background-color: #fff;
+    max-width: 90%;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    width: 28.75em;
+}
+
+.website-icon {
+    background-color: #000;
+    background-image: url(https://web.hycdn.cn/hg_web_sdk/lib/assets/header_bg.11d0e46058f2e734a322.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 5.125em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 4px solid #0098dc;
+    border-radius: 4px 4px 0 0;
+    position: relative;
+}
+
+.website-icon .website-icon-img {
+    display: block;
+    max-height: 100%;
+    border-radius: 5px;
+    width: auto;
+}
+
+.website-icon .return-button {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 0 1.5em;
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    visibility: visible;     
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.website-icon .return-button .return-button-img {
+    display: block;
+    max-height: 90%;
+    width: auto;
+}
+
+.registration-container {
+    padding: 2em;
+    padding-bottom: 0;
+}
+
+.registration-container .input-email {
+    position: relative;
+    transition: border-color 0.3s;
+    height: 3em;
+    border-radius: 1.5em;
+    border: 1px solid #eeeeee;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 1.5em;
+}
+
+.registration-container .input-email .email-icon {
+    transition: opacity 0.3s;
+    opacity: 0.5;
+    display: block;
+    width: 1.125em;
+    height: auto;
+}
+
+.registration-container .input-email .email {
+    margin: 0 0.57142857em;
+    padding-block: 1px;
+    padding-inline: 2px;
+    flex: auto;
+    display: block;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    font-size: 0.875em;
+    background-color: transparent;
+}
+
+.registration-container .input-email .rm-email {
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right:   -0.5em;
+    width: 1.75em;
+    height: 100%;
+}
+
+.registration-container .input-name .rm-email .rm-email-icon {
+    transition: opacity 0.3s;
+    opacity: 0;
+    display: block;
+    width: 50%;
+    height: auto;
+}
+
+.registration-container .input-name {
+    position: relative;
+    transition: border-color 0.3s;
+    height: 3em;
+    border-radius: 1.5em;
+    border: 1px solid #eeeeee;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 1.5em;
+    margin-top: 0.75em;
+}
+
+.registration-container .input-name .name-icon {
+    transition: opacity 0.3s;
+    opacity: 0.5;
+    display: block;
+    width: 1.125em;
+    height: auto;
+}
+
+.registration-container .input-name .name {
+    margin: 0 0.57142857em;
+    padding-block: 1px;
+    padding-inline: 2px;
+    flex: auto;
+    display: block;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    font-size: 0.875em;
+    background-color: transparent;
+}
+
+.registration-container .input-name .rm-name {
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right:   -0.5em;
+    width: 1.75em;
+    height: 100%;
+}
+
+.registration-container .input-name .rm-name .rm-name-icon {
+    transition: opacity 0.3s;
+    opacity: 0;
+    display: block;
+    width: 50%;
+    height: auto;
+}
+
+.registration-container .input-password {
+    position: relative;
+    margin-top: 0.75em;
+    transition: border-color 0.3s;
+    height: 3em;
+    border-radius: 1.5em;
+    border: 1px solid #eeeeee;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 1.5em;
+}
+
+.registration-container .input-password .password-icon {
+    transition: opacity 0.3s;
+    opacity: 0.5;
+    display: block;
+    width: 1.125em;
+    height: auto;
+}
+
+.registration-container .input-password .password {
+    margin: 0 0.57142857em;
+    flex: auto;
+    display: block;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    font-size: 0.875em;
+    background-color: transparent;
+}
+
+input[type="password" i] {
+    -webkit-text-security: disc !important;
+    padding-block: 1px;
+    padding-inline: 2px;
+}
+
+.registration-container .input-password .rm-password {
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: -0.5em;
+    width: 1.75em;
+    height: 100%;
+}
+
+.registration-container .input-password .rm-password .rm-password-icon {
+    transition: opacity 0.3s;
+    opacity: 0;
+    display: block;
+    width: 50%;
+    height: auto;
+}
+
+.registration-container .input-password .hidden-control {
+    opacity: 1;
+    cursor: pointer;
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: -0.5em;
+    margin-left: 0.5em;
+    width: 1.75rem;
+    height: 100%;
+    transition: opacity 0.3s;
+    opacity: 0.56;
+}
+
+.registration-container .input-password .hidden-control .h-c-icon {
+    display: block;
+    width: 0.875em;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+
+.button-container {
+    padding: 0 2em 1.5em;
+}
+
+.button-container .registration{
+    cursor: pointer;
+    margin: 1.5em;
+    height: 3em;
+    border-radius: 1.5em;
+    display: flex;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+    background-color: #000;
+}
+
+
+
+/* qanda page style */
+/* qanda page style */
+
+
+
+/* scroll bar set */
+body * {
+    scrollbar-color: var(--scrollbar-hover, rgba(80, 40, 140, 0.5)) rgba(0,0,0,0);
+}
+
+.qanda-page {
+    height: 100%;
+    position: relative;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+div {
+    display: block;
+}
+
+.header-container {
+    flex: 0 0 auto;
+    display: flex;
+    box-sizing: border-box;
+    height: 50px;
+    color: rgb(255, 255, 255);
+    background-color: #3e3e3e;
+    align-items: center;
+}
+
+
+.sign-out-button-container {
+    display: flex;
+    position: relative;
+    min-width: 0;
+}
+
+.sign-out-button {
+    padding: 0 20px;
+    color: inherit;
+    display: inline-block;
+    text-align: center;
+    font-size: 0;
+    background-color: rgba(0,0,0,0);
+    border: none;
+    line-height: 50px;
+    width: 50px;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+}
+
+.logout {
+    margin-left: 30px;
+}
+
+.app-logo {
+    flex: 0 0 auto;
+    align-self: center;
+    height: 90%;
+    margin-left: 30px;
+    margin-right: 40px;
+}
+
+.app-title-container {
+    flex: 1 1 auto;
+    display: flex;
+    align-self: center;
+    position: relative;
+    min-width: 0;
+}
+
+.app-title {
+    min-width: 60px;
+    align-items: center;
+    align-self: center;
+    font-size: 20px;
+    display: flex;
+}
+
+.app-title .text-0,
+.app-title .text-2 {
+    text-align: center;
+    min-width: 0;
+}
+
+.app-title .text-1 {
+    margin:4px 5px;
+}
+
+.app-group-user {
+    padding: 0 10px;
+    display: flex;
+    position: relative;
+    
+}
+
+.app-group-user .user-icon {
+    font-size: 30px;
+}
+
+.app-content-container {
+    flex: 1 0 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    min-width: 0;
+    position: relative;
+}
+
+.app-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+}
+
+.split-panel {
+    min-width: 250px;
+    max-width: 400px;
+    min-height: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.thread-list-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.thread-list-header {
+    padding-right: 10px;
+    justify-content: space-between;
+    flex: 0 0 auto;
+    height: 45px;
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    margin-left: 10px;
+    color: orange;
+}
+.header-side {
+    flex: 0 0 auto;
+    display: flex;
+    cursor: pointer;
+}
+
+
+
+.discuss-new-thread-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: orange;
+    border-radius: 6px;
+    font-weight: 600;
+    color: #fff;
+    fill: #fff;
+    padding: 5px 10px;
+    box-shadow: 0 0 0 0 rgba(0,127,255,0);
+}
+
+.new-thread {
+    margin-right: 5px;
+}
+.thread-list-body {
+    flex: 1 0 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-y: auto;
+}
+
+.thread-list {
+    flex: 1 1 auto;
+    overflow-y: auto;
+}
+
+.div-item:first-child {
+    margin-top: 5px;
+}
+
+.div-item {
+    margin: 0 5px 5px 0;
+    border-radius: 8px;
+    position: relative;;
+
+}
+
+.thread-list-like-icon {
+    font-size: 12px !important;
+}
+
+.div-item:after {
+    content: ''; 
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    height: 1px; 
+    background: rgba(0, 0, 0, 0.1); 
+}
+
+.dft-full {
+    --pad: 15px;
+    --row-gap: 10px;
+    color: rgb(34, 34, 34);
+    display: block;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    font-size: 85%;
+    padding: var(--pad) 0;
+}
+
+.dft-body {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    justify-content: center;
+}
+
+.dft-title {
+    padding-left: 10px;
+    font-size: 15px;
+    flex: 1 0 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.dft-foot {
+    display: flex;
+    align-items: center;
+    font-size: 90%;
+    margin: 10px 0 0 0;
+    padding: 0 15px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.dft-foot-fill {
+    flex: 1 4 0;
+    display: flex;
+    align-items: center;
+    min-width: 0;
+}
+
+.dft-user {
+    flex: 0 1 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 10px;
+    outline-offset: 2px;
+}
+
+.dft-date {
+    margin-left: 10px;
+}
+.dft-count-icon {
+    stroke: none;
+    fill: #ccc;
+    margin: 0 5px 0 10px;
+    font-size: 90%;
+    width: 1em;
+    height: 1em;
+    display: inline-flex;
+    vertical-align: -0.0833em;
+}
+
+.dft-count-icon svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.dft-count {
+    font-size: 90%;
+}
+
+
+.split-divider {
+    background-color: #ddd;
+    flex: 0 0 0;
+    position: relative;
+    cursor: ew-resize;
+}
+
+.split-divider::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -5px; 
+    right: -5px; 
+    bottom: 0;
+    background: transparent;
+  }
+
+.split-panel-horizontal {
+    min-width: 0;
+    min-height: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.disindf-content {
+    overflow-y: auto;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right:0;
+    bottom: 0;
+}
+
+.discuss-landing {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right:0;
+    bottom: 0;
+}
+.pane-placeholder.dl-placeholder {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.pane-placeholder {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(248, 248, 248);
+    color: rgb(102,102,102);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 22px;
+    overflow: hidden;
+}
+
+.icon.paneph-icon {
+    font-size: 100px;
+    fill: #e8e8e8;
+    stroke: none;
+    margin: 20px 0;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.icon {
+    width: 1em;
+    height: 1em;
+    display: inline-flex;
+    vertical-align: -0.0833em;
+}
+
+.icon .forum {
+    font-size: 100px;  
+}
+

@@ -1,0 +1,481 @@
+/* This file includes the style of create-thread, thread-details and comment (which are shown on the right side of qanda page */
+
+/* right side page control */
+.hidden-main-status .main-right-side-page,
+.hidden-new-status .new-thread-right-side-page,
+.hidden-detail-status .detail-thread-right-side-page,
+.hidden-edit-status .edit-thread-right-side-page {
+  position: absolute;
+  left: -5000em;
+  height: 0;
+  overflow: hidden;
+}
+
+
+
+
+/* thread-details without comment before */
+
+.discuss-show {
+    display: block;
+}
+
+.thread-body {
+    margin: 40px auto;
+    max-width: 800px;
+    padding: 0 20px;
+
+}
+
+.thread-title {
+    margin: 20px 0;
+    font-size: 180%;
+    font-weight: normal;
+}
+
+.thread-head-layout {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.thread-head-start {
+    flex: 1 1 150px;
+    display: flex;
+    align-items: center;
+}
+
+.thread-head-start .thread-user-icon {
+    flex: 0 0 auto;
+    margin-right: 10px;
+    font-size: 36px;
+}
+
+.thread-head-body {
+    flex: 1 0 0;
+}
+
+.thread-head-body-user {
+    display: flex;
+    align-items: center;
+    margin: 2px 0;
+}
+
+.thread-user-name {
+    color: gold;
+    outline-offset: 2px;
+}
+
+.user-role-label {
+    margin-left: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 60%;
+    vertical-align: middle;
+    margin: 0 .2em;
+    cursor: inherit;
+    white-space: nowrap;
+    color: #333;
+}
+.thread-head-body-time {
+    margin: 2px 0;
+    font-size: 80%;
+    color: #757575;
+}
+
+.thread-head-end {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.thread-head-button {
+    cursor: pointer;
+    border: none;
+    background-color: rgba(0,0,0,0);
+    border-radius: 0;
+    font-size: inherit;
+    color: inherit;
+    padding: 0;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 auto;
+    min-width: 60px;
+    margin-left: 4px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.thread-head-button .icon {
+    font-size: 16px;
+    height: 18px;
+    fill: #666;
+    width: auto;
+    display: inline-flex;
+}
+
+.icon-like,
+.icon-watching {
+    color: red;
+}
+
+
+.thread-head-icon-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+.thread-body-layout {
+    display: flex;
+    align-items: flex-start;
+}
+
+.thread-body-container {
+    flex: 1 0 0;
+    min-width: 0;
+    margin-left: 46px;
+}
+
+.display-document {
+    font-size: 15px;
+}
+
+.thread-button-container {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    font-size: .85rem;
+}
+
+.thread-button-container .comment,
+.thread-button-container .edit,
+.thread-button-container .delete {
+    cursor: pointer;
+    border: none;
+    background-color: rgba(0,0,0,0);
+    border-radius: 0;
+    font-size: 1rem;
+    padding: 0;
+    color: #757575;
+    fill: #757575;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.thread-answer-heading {
+    margin: 30px 0;
+    font-size: 150%;
+}
+
+.thread-answer {
+
+}
+
+.post-answer,
+.input-thread-container {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    position: relative;
+    display: flex;
+}
+
+.input-answer,
+.input-thread {
+    flex: 1 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: hidden;
+}
+
+.input-answer {
+    width: auto; 
+    margin: 0; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    font-family: Arial, sans-serif; 
+    font-size: 1em; 
+    resize: vertical; 
+}
+.post-butto-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.post-button {
+    display: flex;
+    align-items: flex-start;
+    justify-content: end;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.post-button-icon {
+    color: #fff;
+    fill:#fff;
+    background-color: #096ff4;
+    border-color: rgba(0,0,0,0);
+    cursor: pointer;
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid #d0d0d0;
+    border-radius: 4px;
+    padding: 8px 12px;
+    min-width: 60px;
+    line-height: 1em;
+    font-size: 1rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+
+/* New thread */
+.new-header-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+}
+
+.header-container-header {
+    flex: 0 0 auto;
+    display: flex;
+    box-sizing: border-box;
+    height: 45px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+    user-select: none;
+}
+
+.header-layout-left {
+    flex: 0 1 auto;
+    display: flex;
+    margin-right: auto;
+}
+
+.header-layout-fill {
+    left: -6px;
+    flex: 0 1 auto;
+    min-width: 0;
+    position: relative;
+}
+.header-layout-right {  
+    flex: 0 1 auto;
+    display: flex;
+    margin-left: auto;
+}
+
+.navbar-fill {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.navbar-title-layout {
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    min-width: 0;
+}
+
+.navbar-title {
+    font-size: 18px;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0;
+    line-height: normal;
+}
+
+.navbar-side {
+    display: flex;
+    background-color: inherit;
+}
+
+.navbar-button {
+    border: none;
+    background-color: rgba(0,0,0,0);
+    border-radius: 0;
+    font-size: inherit;
+    flex: 0 1 auto;
+    min-width: 0;
+    padding: 0 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    color: #0064c8;
+    fill: #0064c8;
+    font-family: "Open Sans","Arial";
+    margin: 0;
+    cursor: pointer;
+}
+
+.navbar-text {
+    flex: 0 1 auto;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.header-container-content {
+    flex: 1 0 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    min-width: 0;
+    position: relative;
+}
+
+.header-container-scroll {
+    flex: 1 0 0;
+    min-height: 0;
+    min-width: 0;
+    overflow: auto;
+    position: relative;
+}
+
+.new-thread-content {
+    margin: 0 auto;
+    max-width: 700px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.textarea {
+    margin: 40px 0 20px 0;
+}
+
+.thread-field {
+    margin: 40px 0;
+    display: flex;
+    align-items: center;
+}
+
+.thread-field>label {
+    min-width: 60px;
+    flex: 0 0 auto;
+    color:#444;
+    font-size: 110%;
+    margin-right: 20px;
+}
+
+.thread-field>* {
+    flex: 1 0 0;
+    min-width: 0;
+}
+
+.thread-field-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.thread-field-body .input-container {
+    display: flex;
+    flex-direction: column;
+    border-color: rgb(34, 34, 34);
+}
+
+.input-thread-container {
+
+}
+
+.input-thread {
+    width: 100%; 
+    margin: 0; 
+    min-height: 200px;
+    max-height: 400px;
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    font-family: Arial, sans-serif; 
+    font-size: 1em; 
+    resize: vertical; 
+  }
+  
+
+.input-thread-title {
+    flex: 1 1 0;
+    font-size: 1rem;
+    text-align: start;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    padding: 6px;
+    color: black;
+    background-color: white;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.thread-checkboxes {
+    display: flex;
+}
+
+.thread-checkbox {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex: 1 0 0;
+    padding: 0 20px 20px 0;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    user-select: none;
+    cursor: pointer;
+
+}
+
+
+.check-button {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ddd;
+    background-color:white;
+    box-shadow: 0 0 0 0 rgba(0,127,255,0);
+}
+
+.check-layout {
+    align-items: center;
+}
+
+.check-label:not(:empty) {
+    margin-left: 10px;
+}
+
+.check-label {
+    flex: 1 1 auto;
+    min-width: 0;
+    line-height: 1.2;
+}
+
+.check-description {
+    display: block;
+    margin-left: 30px;
+    margin-top: 5px;
+    color: #666;
+    font-size: 85%;
+    line-height: 1.2;
+}

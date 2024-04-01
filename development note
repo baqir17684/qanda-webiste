@@ -1,0 +1,29 @@
+1. 登陆表单仅需输入email,点击继续button，与近期访问记录及数据库check，check通过直接登陆，未通过输入密码
+2. 鼠标指针变为圆圈，点击有波纹效果，类似明日方舟官网，body cursor
+3.loading动画，略
+4. 用<button>就会有user-agent-stylesheet，改用div就没有
+5.绝对定位的元素不再存在于正常文档布局流中，相反，它坐在自己的层独立于一切，因此可以创建不干扰页面上其他元素位置的UI功能。
+6.login 页面html元素赘余，最外层container设置display:flex, align-items:center, justify-content:center 就能让登陆框居中
+7. block盒子，会换行，width,height有效，未指定width，方框将沿行向扩展。<h1>,<p>默认使用
+   inline盒子不会换行，width,height不起作用，水平方向内外边距边框会把其他inline盒子推开，垂直方向不会
+   inline-block不会换行，width,height有效，内外边距边框会推开其他元素
+
+8.如果使用了 unicode 字符 U+25BC，请确保设置了 charset meta 标签，    <meta charset="utf-8">
+9.设置元素内容水平对齐，text-align。 设置元素垂直方向，对于行内或行内块元素vertical-align，对于块级元素需要使用flexbox或grid，flexbox使用
+align-items（默认）或justify-content
+
+10？ cursor-ring如何实现
+
+11: 处理失焦和点击两个事件的发生顺序，在我的项目中，邮箱输入栏右侧会有一个remove 输入内容的按钮，，我希望该按钮仅在邮箱输入栏focus且内容不为空时显示，触发click事件时删去输入内容，
+因为X图片不在输入栏盒子内，点击它会同时触发失焦和click两个事件，在浏览器的处理顺序中默认先处理失焦，失焦按钮就不显示了，导致没法触发click事件。
+解决：1.首先尝试添加setTimeout,发现仍不影响浏览器处理顺序
+   2.改click为mousedown，它在浏览器中的处理顺序先于失焦，可以先处理完清空输入栏，在设置按钮opacity为0(mousedown中有判断条件，opacity值为1才会执行)
+
+
+12:记得说明登陆界面自定义样式
+  媒体适配记得说明dragbar和
+
+
+//实现
+
+1.使用js控制input元素被聚焦时，其父元素边框改变
