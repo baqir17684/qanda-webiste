@@ -298,6 +298,7 @@ window.addEventListener("load", function () {
 
   //Login button begin, if password correct, change page from login to qanda
   loginButton.addEventListener("click", function(e) {
+    e.preventDefault();
     const body = {
       "email": loginEmail.value,
       "password": loginPassword.value
@@ -496,6 +497,7 @@ window.addEventListener("load", function () {
 
   //register button begin
   registerButton.addEventListener("click", function(e) {
+    e.preventDefault();
     if (registerPassword.value !== confirmPassword.value) {
       registerPassword.value = '';
       confirmPassword.value = '';
